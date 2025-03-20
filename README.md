@@ -20,6 +20,14 @@ A Chrome extension that allows you to save LeetCode problems as PDF files with a
 2. Click the "Save as PDF" button in the navigation bar
 3. The PDF will be automatically generated and downloaded
 
+## Examples
+
+### Extension in Action
+![LeetCode Save as PDF Button](assets/leetcode-web.png)
+
+### Sample Generated PDF
+View a [sample PDF](assets/36-valid-sudoku.pdf) generated from a LeetCode problem.
+
 ## Technology
 
 This extension is built using:
