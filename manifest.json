@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode PDF Extractor",
+  "version": "1.0",
+  "description": "Extract LeetCode problems as PDF",
+  "permissions": ["activeTab", "downloads"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.leetcode.com/problems/*"],
+      "js": [
+        "lib/html2pdf.js/0.10.3/html2pdf.bundle.min.js",
+        "pdf-generator.js",
+        "content.js"
+      ],
+      "css": ["styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["*://*.leetcode.com/*"]
+    }
+  ]
+}
