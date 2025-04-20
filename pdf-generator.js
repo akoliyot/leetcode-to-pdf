@@ -17,17 +17,15 @@ function titleToKebabCase(title) {
 
 // Function to generate PDF
 function generatePDF(title, contentHtml) {
-  // Create a container for the PDF content (off-screen)
+  console.log('Passed in', {title, contentHtml})
+
   const container = document.createElement('div');
-  container.style.position = 'absolute';
-  container.style.left = '-9999px';
-  container.style.top = '0';
   
   // Add title to the container
   const titleElement = document.createElement('h1');
   titleElement.textContent = title;
   titleElement.style.color = 'black';
-  titleElement.style.fontSize = '36px';
+  titleElement.style.fontSize = '24px';
   titleElement.style.marginBottom = '30px';
 
   // Assemble the container with title and content
@@ -64,7 +62,8 @@ function generatePDF(title, contentHtml) {
       scale: 7,
       useCORS: true,
       logging: true,
-      backgroundColor: '#FFFFFF'
+      backgroundColor: '#FFFFFF',
+      willReadFrequently: true // Fix for canvas readback operations
     },
     jsPDF: { 
       unit: 'mm', 
